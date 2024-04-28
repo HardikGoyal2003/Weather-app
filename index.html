@@ -11,8 +11,11 @@
     <div class="main relative">
         <div class="bgImageContainer bg-cover bg-center h-screen  brightness-75" style="background-image: url('/assets/static/images/bg.jpg')">
         </div>
-        <div class="mainContainerOverlapImage w-screen h-full absolute top-0 flex flex-row flex-wrap justify-between">
-            <div class="leftMainContainer w-2/4 mt-[384px] h-[233px] pl-80 absolute bottom-28 bg-red-00">
+        <!-- Main Container that contains all the components -->
+        <div class="mainContainerOverlapImage w-screen h-full absolute top-0 flex flex-row flex-wrap justify-center"
+        >
+            <!-- Left Container that contains day,date,time,tempr -->
+            <div class="leftMainContainer mt-[384px] h-[233px] bottom-28 bg-red-800">
                 <div class="h-[94px] flex flex-row relative ">
                     <p class="text-8xl font-bold w-2/8">23<span class="text-[32px] font-medium absolute"><sup>&deg;C</sup></span></p>
                     <p class="mainWeather text-2xl font-medium leading-[38.73px] capitalize relative mt-14 ml-14"></p>
@@ -21,16 +24,51 @@
                 <p class="text-[64px] font-[500] leading-[77.45px]">Delhi, India</p> 
                 <p class="dateAndTime text-2xl font-medium leading-[29.05px]"></p> 
             </div>
-            <div  class="rightMainContainer w-2/4 h-screen flex flex-col absolute right-0 pl-16 bg-green-00">
+
+            <!-- Right Container that contains 3 rows-->
+            <div  class="rightMainContainer h-screen flex flex-col bg-green-800">
+                
+                <!-- First Row : Hourly Container that shows time and every 3 hrs data-->
                 <div class="hourlyContainer w-[424px] h-[152px] bg-[#F4F9FDCC]/10 backdrop-blur-sm mt-80 p-[15px] rounded-[10px] mb-8" >
                     <p class="font-medium text-[16px] leading-[19.36px] ml-32">3 Hour Forecast</p>
                     <div class="rounded-full border-t-[1px] m-2 text-lg"></div>
                     <div class="allHourlyContainer flex flex-row ml-[33.5px]"></div>
                 </div>
-                <div class="dailyContainer max-w-[424px] bg-[#F4F9FDCC]/10 backdrop-blur-sm rounded-[10px] p-[16px] flex flex-col">
-                    <p class="font-medium text-[16px] leading-[19.36px] ml-32">5 Days Forecast</p>
-                    <div class="bg-blue-400 rounded-full border-t-[1px] m-2"></div>
-                    <div class="allDailyContainer w-[331px] ml-[26px] flex flex-col"></div>
+                
+                <!-- Second Row : This Container will contain 2 cards-->
+                <div class="dailyAndSun bg-slate-300">
+
+                    <!-- Card 1 : This Container will contain daily basis data-->
+                    <div class="dailyContainer max-w-[424px] bg-[#F4F9FDCC]/10 backdrop-blur-sm rounded-[10px] p-[16px] flex flex-col">
+                        <p class="font-medium text-[16px] leading-[19.36px] ml-32">5 Days Forecast</p>
+                        <div class="bg-blue-400 rounded-full border-t-[1px] m-2"></div>
+                        <div class="allDailyContainer w-[331px] ml-[26px] flex flex-col"></div>
+                    </div>
+
+                    <!-- Card 2 : This container will contain sunset and sunrise time -->
+                    <div class="sunTime bg-orange-400 w-5"></div>ime
+                </div>
+
+                <!-- Third Row : This Container will contain 3 cards-->
+                <div class="threeCards flex flex-row">
+
+                    <!-- Card 1 : This will contain humidity -->
+                    <div class="card1 bg-[#F4F9FDCC]/10 backdrop-blur-sm rounded-[10px] p-[16px] flex flex-col">
+                        <p class="font-medium text-[16px] leading-[19.36px] ml-32">Humidity</p>
+                        <div class="windContainer w-[331px] ml-[26px] flex flex-col"></div>
+                    </div>
+
+                    <!-- Card 1 : This will contain pressure -->
+                    <div class="card2 bg-[#F4F9FDCC]/10 backdrop-blur-sm rounded-[10px] p-[16px] flex flex-col">
+                        <p class="font-medium text-[16px] leading-[19.36px] ml-32">Pressure</p>
+                        <div class="humidityContainer w-[331px] ml-[26px] flex flex-col"></div>
+                    </div>
+
+                    <!-- Card 1 : This will contain wind -->
+                    <div class="card3 bg-[#F4F9FDCC]/10 backdrop-blur-sm rounded-[10px] p-[16px] flex flex-col">
+                        <p class="font-medium text-[16px] leading-[19.36px] ml-32">Wind</p>
+                        <div class="pressureContainer w-[331px] ml-[26px] flex flex-col"></div>
+                    </div>
                 </div>
             </div>
         </div>
