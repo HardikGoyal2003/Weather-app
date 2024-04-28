@@ -1,4 +1,4 @@
-const API_KEY = 'dc093810bb077375dfa0c289398f9758';
+const API_KEY = 'Your_API_KEY';
 const API_CURRENT_WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
 const API_WEATHER_FORECAST_URL = 'https://api.openweathermap.org/data/2.5/forecast?units=metric&q=';
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
