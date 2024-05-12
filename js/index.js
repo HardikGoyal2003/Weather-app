@@ -1,4 +1,4 @@
-const API_KEY = 'Your_API_KEY';
+const API_KEY = 'your-api-key';
 const API_CURRENT_WEATHER_URL = 'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
 const API_WEATHER_FORECAST_URL = 'https://api.openweathermap.org/data/2.5/forecast?units=metric&q=';
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -34,6 +34,7 @@ async function checkCurrentWeather() {
     try {
         const response = await fetch(`${API_CURRENT_WEATHER_URL}Delhi&appid=${API_KEY}`);
         const data = await response.json();
+        console.log(data);
         weather.innerHTML=data.weather[0].description;
         weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     } catch (error) {
@@ -52,11 +53,11 @@ async function check3HourlyWeather() {
     //                         <p class="text-lg font-medium leading-[21.78px]">23<span class="text-[8px] font-medium absolute "><sup>&deg;C</sup></span></p>
     //                     </div>
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 8; i++) {
         let individualHourlyContainer = document.createElement('div');
-        individualHourlyContainer.classList.add('flex', 'flex-col', 'mr-[30.5px]');
+        individualHourlyContainer.classList.add('flex', 'flex-col');
         let time = document.createElement('p');
-        time.classList.add('text-xs', 'leading-[14.52px]', 'font-medium');
+        time.classList.add('text-xs', 'leading-[14.52px]', 'font-medium' , 'text-center');
         time.innerText = new Date(data.list[i].dt_txt).getHours() + ':00';
         individualHourlyContainer.appendChild(time);
         let icon = document.createElement('img');
@@ -64,7 +65,7 @@ async function check3HourlyWeather() {
         icon.classList.add('w-8', 'h-8');
         individualHourlyContainer.appendChild(icon);
         let temp = document.createElement('p');
-        temp.classList.add('text-lg', 'font-medium', 'leading-[21.78px]');
+        temp.classList.add('text-lg', 'font-medium', 'leading-[21.78px]', 'text-center');
         temp.innerText = `${Math.floor(data.list[i].main.temp)}`;
         let sp = document.createElement('span');
         sp.innerHTML = '<sup>&deg;C</sup>';

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link href="/css/output.css" rel="stylesheet">
+    <link href="/css/input.css" rel="stylesheet">
     <script type="" src="/js/index.js" defer></script>
 </head>
 <body class="font-['inter'] text-[#F4F9FDCC]">
@@ -26,17 +27,17 @@
             </div>
 
             <!-- Right Container that contains 3 rows-->
-            <div  class="rightMainContainer h-screen flex flex-col bg-green-800">
+            <div  class="rightMainContainer w-[49%] flex flex-col bg-green-800">
                 
                 <!-- First Row : Hourly Container that shows time and every 3 hrs data-->
-                <div class="hourlyContainer w-[424px] h-[152px] bg-[#F4F9FDCC]/10 backdrop-blur-sm mt-80 p-[15px] rounded-[10px] mb-8" >
-                    <p class="font-medium text-[16px] leading-[19.36px] ml-32">3 Hour Forecast</p>
+                <div class="hourlyContainer w-[100%] h-[20%] bg-[#F4F9FDCC]/10 backdrop-blur-sm  p-[15px] rounded-[10px] mb-8" >
+                    <p class="font-medium text-[16px] leading-[19.36px] text-center">3 Hour Forecast</p>
                     <div class="rounded-full border-t-[1px] m-2 text-lg"></div>
-                    <div class="allHourlyContainer flex flex-row ml-[33.5px]"></div>
+                    <div class="allHourlyContainer flex flex-row justify-around "></div>
                 </div>
                 
                 <!-- Second Row : This Container will contain 2 cards-->
-                <div class="dailyAndSun bg-slate-300">
+                <div class="dailyAndSun bg-slate-0">
 
                     <!-- Card 1 : This Container will contain daily basis data-->
                     <div class="dailyContainer max-w-[424px] bg-[#F4F9FDCC]/10 backdrop-blur-sm rounded-[10px] p-[16px] flex flex-col">
