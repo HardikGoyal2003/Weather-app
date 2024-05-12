@@ -55,9 +55,9 @@ async function check3HourlyWeather() {
 
     for (let i = 0; i < 8; i++) {
         let individualHourlyContainer = document.createElement('div');
-        individualHourlyContainer.classList.add('flex', 'flex-col', 'mr-[30.5px]');
+        individualHourlyContainer.classList.add('flex', 'flex-col');
         let time = document.createElement('p');
-        time.classList.add('text-xs', 'leading-[14.52px]', 'font-medium');
+        time.classList.add('text-xs', 'leading-[14.52px]', 'font-medium' , 'text-center');
         time.innerText = new Date(data.list[i].dt_txt).getHours() + ':00';
         individualHourlyContainer.appendChild(time);
         let icon = document.createElement('img');
@@ -65,7 +65,7 @@ async function check3HourlyWeather() {
         icon.classList.add('w-8', 'h-8');
         individualHourlyContainer.appendChild(icon);
         let temp = document.createElement('p');
-        temp.classList.add('text-lg', 'font-medium', 'leading-[21.78px]');
+        temp.classList.add('text-lg', 'font-medium', 'leading-[21.78px]', 'text-center');
         temp.innerText = `${Math.floor(data.list[i].main.temp)}`;
         let sp = document.createElement('span');
         sp.innerHTML = '<sup>&deg;C</sup>';
